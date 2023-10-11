@@ -15,6 +15,7 @@
 		BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D02AD6F6710091FC84 /* CoinMarketRowView.swift */; };
 		BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */; };
 		BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */; };
+		BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4E32AD6FC870091FC84 /* RemoteCoinMarket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BAA7E4D02AD6F6710091FC84 /* CoinMarketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketRowView.swift; sourceTree = "<group>"; };
 		BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		BAA7E4E32AD6FC870091FC84 /* RemoteCoinMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCoinMarket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BAA7E4D22AD6F9520091FC84 /* LoadingState */,
+				BAA7E4E12AD6FC660091FC84 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -141,6 +144,22 @@
 				BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */,
 			);
 			path = LoadingState;
+			sourceTree = "<group>";
+		};
+		BAA7E4E12AD6FC660091FC84 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4E22AD6FC750091FC84 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BAA7E4E22AD6FC750091FC84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4E32AD6FC870091FC84 /* RemoteCoinMarket.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */,
+				BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */,
 				BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */,
 				BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */,
 				BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */,
