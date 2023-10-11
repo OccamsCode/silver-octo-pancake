@@ -9,9 +9,11 @@ import Foundation
 
 struct CoinMarketChart {
     
-    struct Plot {
+    struct Plot: Identifiable {
         let date: Date
         let value: Double
+        
+        var id: Date { return date }
     }
     
     let thumbnailImage: URL

@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4600652AD7144E0017C0CD /* Observable */,
-				BA4600632AD7105E0017C0CD /* CoinMarketChartView.swift */,
+				BA46006E2AD721270017C0CD /* Views */,
 			);
 			path = CoinMarketChart;
 			sourceTree = "<group>";
@@ -128,6 +128,14 @@
 				BA4600662AD7146A0017C0CD /* CoinMarketChartObservable.swift */,
 			);
 			path = Observable;
+			sourceTree = "<group>";
+		};
+		BA46006E2AD721270017C0CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA4600632AD7105E0017C0CD /* CoinMarketChartView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BAA7E4AD2AD6F4380091FC84 = {
