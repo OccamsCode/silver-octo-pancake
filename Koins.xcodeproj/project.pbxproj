@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4600592AD70B0B0017C0CD /* RouterPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4600582AD70B0B0017C0CD /* RouterPath.swift */; };
+		BA46005B2AD70B540017C0CD /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46005A2AD70B540017C0CD /* NavigationRoute.swift */; };
+		BA46005D2AD70BA40017C0CD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46005C2AD70BA40017C0CD /* Router.swift */; };
+		BA46005F2AD70D380017C0CD /* EnironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46005E2AD70D380017C0CD /* EnironmentValues.swift */; };
+		BA4600612AD70D8F0017C0CD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4600602AD70D8F0017C0CD /* AppRouter.swift */; };
 		BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4B92AD6F4380091FC84 /* KoinsApp.swift */; };
 		BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4BB2AD6F4380091FC84 /* ContentView.swift */; };
 		BAA7E4BE2AD6F43B0091FC84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA7E4BD2AD6F43B0091FC84 /* Assets.xcassets */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA4600582AD70B0B0017C0CD /* RouterPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterPath.swift; sourceTree = "<group>"; };
+		BA46005A2AD70B540017C0CD /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
+		BA46005C2AD70BA40017C0CD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BA46005E2AD70D380017C0CD /* EnironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnironmentValues.swift; sourceTree = "<group>"; };
+		BA4600602AD70D8F0017C0CD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		BAA7E4B62AD6F4380091FC84 /* Koins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA7E4B92AD6F4380091FC84 /* KoinsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoinsApp.swift; sourceTree = "<group>"; };
 		BAA7E4BB2AD6F4380091FC84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA4600572AD70AED0017C0CD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BA4600602AD70D8F0017C0CD /* AppRouter.swift */,
+				BA46005A2AD70B540017C0CD /* NavigationRoute.swift */,
+				BA4600582AD70B0B0017C0CD /* RouterPath.swift */,
+				BA46005C2AD70BA40017C0CD /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		BAA7E4AD2AD6F4380091FC84 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +162,8 @@
 		BAA7E4C92AD6F4D70091FC84 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BA46005E2AD70D380017C0CD /* EnironmentValues.swift */,
+				BA4600572AD70AED0017C0CD /* Navigation */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -377,6 +400,7 @@
 			files = (
 				BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */,
 				BAA7E4E72AD6FCDD0091FC84 /* CoinGeckoClient.swift in Sources */,
+				BA4600612AD70D8F0017C0CD /* AppRouter.swift in Sources */,
 				BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */,
 				BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */,
 				BAA7E5072AD702580091FC84 /* Double+Extension.swift in Sources */,
@@ -385,10 +409,14 @@
 				BAA7E4F52AD7001C0091FC84 /* DomainMapper.swift in Sources */,
 				BAA7E4F32AD6FF100091FC84 /* CoinMarket.swift in Sources */,
 				BAA7E4EF2AD6FE1B0091FC84 /* CoinGeckoRepository.swift in Sources */,
+				BA46005D2AD70BA40017C0CD /* Router.swift in Sources */,
 				BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */,
+				BA4600592AD70B0B0017C0CD /* RouterPath.swift in Sources */,
 				BAA7E5092AD703DD0091FC84 /* CoinMarketObservable.swift in Sources */,
+				BA46005F2AD70D380017C0CD /* EnironmentValues.swift in Sources */,
 				BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */,
 				BAA7E4CF2AD6F6140091FC84 /* CoinMarketView.swift in Sources */,
+				BA46005B2AD70B540017C0CD /* NavigationRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

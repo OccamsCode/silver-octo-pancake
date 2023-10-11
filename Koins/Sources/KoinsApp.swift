@@ -10,12 +10,16 @@ import SwiftUI
 @main
 struct KoinsApp: App {
     
-    @StateObject var observable = CoinMarketObservable()
+    @Environment(\.router) var router
+    
+    init() {
+        AppRouter.registerRoutes()
+    }
     
     var body: some Scene {
         WindowGroup {
-            CoinMarketView()
-                .environmentObject(observable)
+            router.resolve(path: .coinMarket)
+                .environmentObject(CoinMarketObservable())
         }
     }
 }
