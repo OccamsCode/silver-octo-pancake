@@ -25,6 +25,8 @@
 		BAA7E4FD2AD7005B0091FC84 /* DomainMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4FC2AD7005B0091FC84 /* DomainMapperTests.swift */; };
 		BAA7E5042AD700C90091FC84 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E5032AD700C90091FC84 /* Mocks.swift */; };
 		BAA7E5072AD702580091FC84 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E5062AD702580091FC84 /* Double+Extension.swift */; };
+		BAA7E5092AD703DD0091FC84 /* CoinMarketObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E5082AD703DD0091FC84 /* CoinMarketObservable.swift */; };
+		BAA7E50C2AD7047B0091FC84 /* CoinMarketObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E50B2AD7047B0091FC84 /* CoinMarketObservableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		BAA7E4FC2AD7005B0091FC84 /* DomainMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainMapperTests.swift; sourceTree = "<group>"; };
 		BAA7E5032AD700C90091FC84 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		BAA7E5062AD702580091FC84 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		BAA7E5082AD703DD0091FC84 /* CoinMarketObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketObservable.swift; sourceTree = "<group>"; };
+		BAA7E50B2AD7047B0091FC84 /* CoinMarketObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketObservableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		BAA7E4CC2AD6F5F40091FC84 /* Observable */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E5082AD703DD0091FC84 /* CoinMarketObservable.swift */,
 			);
 			path = Observable;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 		BAA7E4FB2AD7005B0091FC84 /* AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E50A2AD7044F0091FC84 /* ObservablesTests */,
 				BAA7E4FC2AD7005B0091FC84 /* DomainMapperTests.swift */,
 				BAA7E5032AD700C90091FC84 /* Mocks.swift */,
 			);
@@ -253,6 +259,14 @@
 				BAA7E5062AD702580091FC84 /* Double+Extension.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BAA7E50A2AD7044F0091FC84 /* ObservablesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E50B2AD7047B0091FC84 /* CoinMarketObservableTests.swift */,
+			);
+			path = ObservablesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +386,7 @@
 				BAA7E4F32AD6FF100091FC84 /* CoinMarket.swift in Sources */,
 				BAA7E4EF2AD6FE1B0091FC84 /* CoinGeckoRepository.swift in Sources */,
 				BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */,
+				BAA7E5092AD703DD0091FC84 /* CoinMarketObservable.swift in Sources */,
 				BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */,
 				BAA7E4CF2AD6F6140091FC84 /* CoinMarketView.swift in Sources */,
 			);
@@ -381,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA7E50C2AD7047B0091FC84 /* CoinMarketObservableTests.swift in Sources */,
 				BAA7E4FD2AD7005B0091FC84 /* DomainMapperTests.swift in Sources */,
 				BAA7E5042AD700C90091FC84 /* Mocks.swift in Sources */,
 			);
