@@ -1,5 +1,5 @@
 //
-//  CoinMarketObservableTests.swift
+//  CoinMarketChartObservableTests.swift
 //  AppTests
 //
 //  Created by Brian Munjoma on 11/10/2023.
@@ -8,15 +8,15 @@
 import XCTest
 @testable import Koins
 
-final class CoinMarketObservableTests: XCTestCase {
+final class CoinMarketChartObservableTests: XCTestCase {
     
-    var sut: CoinMarketObservable!
-    private var repository: MockCoinMarketRespository!
+    var sut: CoinMarketChartObservable!
+    private var repository: MockCoinMarketChartRespository!
     
     override func setUp() {
         
-        repository = MockCoinMarketRespository()
-        sut = CoinMarketObservable(repository: repository)
+        repository = MockCoinMarketChartRespository()
+        sut = CoinMarketChartObservable(coin: CoinMarket.mock, respository: repository)
     }
     
     override func tearDown() {
@@ -32,11 +32,11 @@ final class CoinMarketObservableTests: XCTestCase {
 
     func testLoadRepository_repositorySuccess_loadingStateIsSuccess() async {
         
-        repository.returnValue = .success([])
+        repository.returnValue = .success(CoinMarketChart.mock)
         
-        let _ = try? await sut.fetchAllCoins()
+        let _ = try? await sut.fetchCoinInformation()
         
-        XCTAssertEqual(sut.phase, .success([]))
+        XCTAssertEqual(sut.phase, .success(CoinMarketChart.mock))
     }
     
     func testLoadRepository_repositoryFaulire_loadingStateIsFailed() async {
@@ -44,7 +44,7 @@ final class CoinMarketObservableTests: XCTestCase {
         let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Error"])
         repository.returnValue = .failure(error)
         
-        let _ = try? await sut.fetchAllCoins()
+        let _ = try? await sut.fetchCoinInformation()
         
         XCTAssertEqual(sut.phase, .failed(error))
     }

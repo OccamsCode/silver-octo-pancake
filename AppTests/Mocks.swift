@@ -8,7 +8,28 @@
 import Foundation
 @testable import Koins
 
-// MARK: - Remote Coin
+// MARK: - Repositories
+class MockCoinMarketRespository: CoinMarketRespository {
+    
+    var returnValue: Result<[CoinMarket], Error>?
+    
+    func fetchAllCoinsMarket() async throws -> Result<[CoinMarket], Error> {
+        guard let value = returnValue else { fatalError("Return value in Mock is not set") }
+        return value
+    }
+}
+
+class MockCoinMarketChartRespository: CoinMarketChartRespository {
+    
+    var returnValue: Result<CoinMarketChart, Error>?
+    
+    func fetchMarketCharts(for coin: CoinMarket) async throws -> Result<CoinMarketChart, Error> {
+        guard let value = returnValue else { fatalError("Return value in Mock is not set") }
+        return value
+    }
+}
+
+// MARK: - Remotes Objects
 extension RemoteCoin {
     static var mock: RemoteCoin {
         return RemoteCoin(id: "bitcoin",
@@ -84,5 +105,34 @@ extension RemoteCoinMarketChart {
                     5966663794.13327
                 ]
             ])
+    }
+}
+
+// MARK: - Domain Objects
+extension CoinMarket {
+    static var mock: CoinMarket {
+        return CoinMarket(id: "bitcoind",
+                    marketCapRank: 1,
+                    thumbnailImageURL: URL(string: "https://assets.coingecko.com/coins/images/12819/thumb/UniLend_Finance_logo_PNG.png?1696512611")!,
+                    symbol: "BTC",
+                    marketCap: 539919677463.13275,
+                    price: 27675.668,
+                    pricePercentageChange: 0.24,
+                    lastUpdated: .now)
+    }
+}
+
+extension CoinMarketChart {
+    static var mock: CoinMarketChart {
+        CoinMarketChart(thumbnailImage: URL(string: "https://assets.coingecko.com/coins/images/12819/thumb/UniLend_Finance_logo_PNG.png?1696512611")!,
+                        marketSymbol: "BTC",
+                        currentPrice: 27675.668,
+                        highestPrice: 27902.96253787604,
+                        lowestPrice: 27590.631604658025,
+                        currentDate: .now, priceHistory: [
+                            .init(date: Date(timeIntervalSince1970: 1696708009414 / 1_000), value: 27590.631604658025),
+                            .init(date: Date(timeIntervalSince1970: 1696711601256 / 1_000), value: 27776.307273823193),
+                            .init(date: Date(timeIntervalSince1970: 1696725218808 / 1_000), value: 27902.96253787604)
+                        ])
     }
 }
