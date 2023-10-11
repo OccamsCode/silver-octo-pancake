@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "poppify",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OccamsCode/Poppify",
+      "state" : {
+        "revision" : "0f5acb7823a77796729447a348ee15024b92a5e1",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

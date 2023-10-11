@@ -16,6 +16,10 @@
 		BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */; };
 		BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */; };
 		BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4E32AD6FC870091FC84 /* RemoteCoinMarket.swift */; };
+		BAA7E4E72AD6FCDD0091FC84 /* CoinGeckoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4E62AD6FCDD0091FC84 /* CoinGeckoClient.swift */; };
+		BAA7E4EA2AD6FCFA0091FC84 /* Poppify in Frameworks */ = {isa = PBXBuildFile; productRef = BAA7E4E92AD6FCFA0091FC84 /* Poppify */; };
+		BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4EB2AD6FD660091FC84 /* Requests.swift */; };
+		BAA7E4EF2AD6FE1B0091FC84 /* CoinGeckoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4EE2AD6FE1B0091FC84 /* CoinGeckoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,9 @@
 		BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		BAA7E4E32AD6FC870091FC84 /* RemoteCoinMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCoinMarket.swift; sourceTree = "<group>"; };
+		BAA7E4E62AD6FCDD0091FC84 /* CoinGeckoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoClient.swift; sourceTree = "<group>"; };
+		BAA7E4EB2AD6FD660091FC84 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		BAA7E4EE2AD6FE1B0091FC84 /* CoinGeckoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA7E4EA2AD6FCFA0091FC84 /* Poppify in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +116,7 @@
 			children = (
 				BAA7E4D22AD6F9520091FC84 /* LoadingState */,
 				BAA7E4E12AD6FC660091FC84 /* Network */,
+				BAA7E4ED2AD6FDE80091FC84 /* Repositories */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 		BAA7E4E12AD6FC660091FC84 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E4E52AD6FCC80091FC84 /* Client */,
 				BAA7E4E22AD6FC750091FC84 /* Models */,
 			);
 			path = Network;
@@ -160,6 +170,23 @@
 				BAA7E4E32AD6FC870091FC84 /* RemoteCoinMarket.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BAA7E4E52AD6FCC80091FC84 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4E62AD6FCDD0091FC84 /* CoinGeckoClient.swift */,
+				BAA7E4EB2AD6FD660091FC84 /* Requests.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		BAA7E4ED2AD6FDE80091FC84 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4EE2AD6FE1B0091FC84 /* CoinGeckoRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +205,9 @@
 			dependencies = (
 			);
 			name = Koins;
+			packageProductDependencies = (
+				BAA7E4E92AD6FCFA0091FC84 /* Poppify */,
+			);
 			productName = Koins;
 			productReference = BAA7E4B62AD6F4380091FC84 /* Koins.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +236,9 @@
 				Base,
 			);
 			mainGroup = BAA7E4AD2AD6F4380091FC84;
+			packageReferences = (
+				BAA7E4E82AD6FCFA0091FC84 /* XCRemoteSwiftPackageReference "Poppify" */,
+			);
 			productRefGroup = BAA7E4B72AD6F4380091FC84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,9 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */,
+				BAA7E4E72AD6FCDD0091FC84 /* CoinGeckoClient.swift in Sources */,
 				BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */,
+				BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */,
 				BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */,
 				BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */,
+				BAA7E4EF2AD6FE1B0091FC84 /* CoinGeckoRepository.swift in Sources */,
 				BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */,
 				BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */,
 				BAA7E4CF2AD6F6140091FC84 /* CoinMarketView.swift in Sources */,
@@ -439,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BAA7E4E82AD6FCFA0091FC84 /* XCRemoteSwiftPackageReference "Poppify" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OccamsCode/Poppify";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAA7E4E92AD6FCFA0091FC84 /* Poppify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAA7E4E82AD6FCFA0091FC84 /* XCRemoteSwiftPackageReference "Poppify" */;
+			productName = Poppify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BAA7E4AE2AD6F4380091FC84 /* Project object */;
 }
