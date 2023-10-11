@@ -8,21 +8,84 @@
 import SwiftUI
 
 struct CoinMarketView: View {
+    
+    @EnvironmentObject var observable: CoinMarketObservable
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(0..<15) { index in
-                    CoinMarketRowView(coin: .preview)
+        switch observable.phase {
+        case .loading:
+            loadingView
+            
+        case .failed(let error):
+            ErrorStateView(error: error.localizedDescription)
+            
+        case .success(let coins):
+            NavigationView {
+                List {
+                    ForEach(coins) { coin in
+                        CoinMarketRowView(coin: coin)
+                    }
                 }
+                .listStyle(.plain)
+                .navigationTitle("Markets")
             }
-            .listStyle(.plain)
-            .navigationTitle("Markets")
+            
+        case .idle:
+            Color.clear
+                .onAppear {
+                    Task {
+                        try? await observable.fetchAllCoins()
+                    }
+                }
         }
     }
+    
+    @ViewBuilder
+    var loadingView: some View {
+        VStack {
+            ForEach(0..<10) { index in
+                HStack(spacing: 10) {
+                    Text("Rank")
+                        .font(.body)
+                        .lineLimit(1)
+                        .foregroundColor(.gray)
+                    Color.gray.opacity(0.2)
+                        .frame(width: 44, height: 44)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Symbol")
+                        Text("Market Cap")
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing) {
+                        Text("Current Price")
+                        Text("% Change")
+                    }
+                }
+            }
+        }
+        .redacted(reason: .placeholder)
+        .padding(.horizontal)
+    }
+    
 }
 
 struct CoinMarketView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinMarketView()
+        Group {
+            CoinMarketView()
+                .environmentObject(CoinMarketObservable(phase: .loading))
+                .previewDisplayName("Loading State")
+            
+            CoinMarketView()
+                .environmentObject(CoinMarketObservable(phase: .success([.preview, .preview])))
+                .previewDisplayName("Success State")
+            
+            CoinMarketView()
+                .environmentObject(CoinMarketObservable(phase: .failed(NSError(domain: "0", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to Load"]))))
+                .previewDisplayName("Failed State")
+        }
     }
 }

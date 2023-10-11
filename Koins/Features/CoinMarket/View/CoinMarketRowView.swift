@@ -13,7 +13,8 @@ struct CoinMarketRowView: View {
         HStack {
             
             // Market Cap Rank
-            Text("# \(coin.marketCapRank)")
+            Text("#\(coin.marketCapRank)")
+                .foregroundColor(.black.opacity(0.7))
             
             // Image
             AsyncImage(url: coin.thumbnailImageURL) { image in
@@ -28,11 +29,12 @@ struct CoinMarketRowView: View {
             // Coin Name Info
             VStack(alignment: .leading, spacing: 5) {
                 Text(coin.symbol.uppercased())
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                    .font(.headline)
                 
                 Text(coin.marketCap.asShorthand)
-                    .font(.caption)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
             }
             .padding(.leading, 2)
             
@@ -41,11 +43,10 @@ struct CoinMarketRowView: View {
             // Coin Price Info
             VStack(alignment: .trailing, spacing: 5) {
                 Text(coin.price.asCurrency)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                    .font(.body)
                 
                 Text(coin.pricePercentageChange.asPercentage)
-                    .font(.caption)
+                    .font(.subheadline)
                     .foregroundColor(coin.pricePercentageChange > 0.0 ? .green : .red)
             }
         }

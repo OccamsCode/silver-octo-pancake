@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct KoinsApp: App {
+    
+    @StateObject var observable = CoinMarketObservable()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoinMarketView()
+                .environmentObject(observable)
         }
     }
 }
