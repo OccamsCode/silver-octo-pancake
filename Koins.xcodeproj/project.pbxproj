@@ -14,6 +14,7 @@
 		BAA7E4CF2AD6F6140091FC84 /* CoinMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4CE2AD6F6140091FC84 /* CoinMarketView.swift */; };
 		BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D02AD6F6710091FC84 /* CoinMarketRowView.swift */; };
 		BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */; };
+		BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BAA7E4CE2AD6F6140091FC84 /* CoinMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketView.swift; sourceTree = "<group>"; };
 		BAA7E4D02AD6F6710091FC84 /* CoinMarketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketRowView.swift; sourceTree = "<group>"; };
 		BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				BAA7E4D32AD6F9790091FC84 /* LoadingState.swift */,
+				BAA7E4D52AD6F9AC0091FC84 /* ErrorStateView.swift */,
 			);
 			path = LoadingState;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */,
 				BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */,
 				BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */,
+				BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */,
 				BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */,
 				BAA7E4CF2AD6F6140091FC84 /* CoinMarketView.swift in Sources */,
 			);
