@@ -14,7 +14,6 @@ struct CoinMarketRowView: View {
             
             // Market Cap Rank
             Text("#\(coin.marketCapRank)")
-                .foregroundColor(.black.opacity(0.7))
             
             // Image
             AsyncImage(url: coin.thumbnailImageURL) { image in
