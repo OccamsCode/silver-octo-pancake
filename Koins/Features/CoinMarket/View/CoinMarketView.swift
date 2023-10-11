@@ -40,7 +40,6 @@ struct CoinMarketView: View {
         }
     }
     
-    @ViewBuilder
     var loadingView: some View {
         VStack {
             ForEach(0..<10) { index in

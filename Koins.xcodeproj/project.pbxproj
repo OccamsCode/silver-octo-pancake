@@ -12,6 +12,7 @@
 		BA46005D2AD70BA40017C0CD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46005C2AD70BA40017C0CD /* Router.swift */; };
 		BA46005F2AD70D380017C0CD /* EnironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46005E2AD70D380017C0CD /* EnironmentValues.swift */; };
 		BA4600612AD70D8F0017C0CD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4600602AD70D8F0017C0CD /* AppRouter.swift */; };
+		BA4600642AD7105E0017C0CD /* CoinMarketChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4600632AD7105E0017C0CD /* CoinMarketChartView.swift */; };
 		BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4B92AD6F4380091FC84 /* KoinsApp.swift */; };
 		BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4BB2AD6F4380091FC84 /* ContentView.swift */; };
 		BAA7E4BE2AD6F43B0091FC84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA7E4BD2AD6F43B0091FC84 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		BA46005C2AD70BA40017C0CD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BA46005E2AD70D380017C0CD /* EnironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnironmentValues.swift; sourceTree = "<group>"; };
 		BA4600602AD70D8F0017C0CD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		BA4600632AD7105E0017C0CD /* CoinMarketChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketChartView.swift; sourceTree = "<group>"; };
 		BAA7E4B62AD6F4380091FC84 /* Koins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA7E4B92AD6F4380091FC84 /* KoinsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoinsApp.swift; sourceTree = "<group>"; };
 		BAA7E4BB2AD6F4380091FC84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		BA4600622AD7103A0017C0CD /* CoinMarketChart */ = {
+			isa = PBXGroup;
+			children = (
+				BA4600632AD7105E0017C0CD /* CoinMarketChartView.swift */,
+			);
+			path = CoinMarketChart;
+			sourceTree = "<group>";
+		};
 		BAA7E4AD2AD6F4380091FC84 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		BAA7E4C82AD6F4C90091FC84 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BA4600622AD7103A0017C0CD /* CoinMarketChart */,
 				BAA7E4CB2AD6F5CE0091FC84 /* CoinMarket */,
 			);
 			path = Features;
@@ -401,6 +412,7 @@
 				BAA7E4BC2AD6F4380091FC84 /* ContentView.swift in Sources */,
 				BAA7E4E72AD6FCDD0091FC84 /* CoinGeckoClient.swift in Sources */,
 				BA4600612AD70D8F0017C0CD /* AppRouter.swift in Sources */,
+				BA4600642AD7105E0017C0CD /* CoinMarketChartView.swift in Sources */,
 				BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */,
 				BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */,
 				BAA7E5072AD702580091FC84 /* Double+Extension.swift in Sources */,
