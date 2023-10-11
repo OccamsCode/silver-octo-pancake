@@ -24,5 +24,19 @@ final class DomainMapperTests: XCTestCase {
         XCTAssertEqual(result.price, remoteCoin.currentPrice)
         XCTAssertEqual(result.pricePercentageChange, remoteCoin.priceChangePercentage24H)
     }
+    
+    func testMap_RemoteMarketChart_toCoinMarketChart() {
+        
+        let remoteMarketChart = RemoteCoinMarketChart.mock
+        let coin = CoinMarket.preview
+        
+        let result = DomainMapper.map(coin, object: remoteMarketChart)
+        
+        XCTAssertEqual(result.thumbnailImage, coin.thumbnailImageURL)
+        XCTAssertEqual(result.marketSymbol, coin.symbol)
+        XCTAssertEqual(result.currentPrice, coin.price)
+        XCTAssertEqual(result.currentDate, coin.lastUpdated)
+        XCTAssertEqual(result.priceHistory.count, remoteMarketChart.prices.count)
+    }
 
 }

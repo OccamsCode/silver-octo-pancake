@@ -22,4 +22,26 @@ struct DomainMapper {
                     pricePercentageChange: object.priceChangePercentage24H ?? 0.0,
                     lastUpdated: formatter.date(from: object.lastUpdated) ?? .now)
     }
+    
+    static func map(_ coin: CoinMarket, object: RemoteCoinMarketChart) -> CoinMarketChart {
+        
+        var x = Double.infinity
+        var y = -Double.infinity
+        
+        let points = object.prices.map {
+            let value = $0[1]
+            x = min(x, value)
+            y = max(y, value)
+            
+            return CoinMarketChart.Plot(date: Date(timeIntervalSince1970: $0[0] / 1_000), value: value)
+        }
+        
+        return CoinMarketChart(thumbnailImage: coin.thumbnailImageURL,
+                               marketSymbol: coin.symbol,
+                               currentPrice: coin.price,
+                               highestPrice: y,
+                               lowestPrice: x,
+                               currentDate: coin.lastUpdated,
+                               priceHistory: points)
+    }
 }
