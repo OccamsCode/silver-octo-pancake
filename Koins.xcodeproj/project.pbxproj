@@ -24,6 +24,7 @@
 		BAA7E4F52AD7001C0091FC84 /* DomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4F42AD7001C0091FC84 /* DomainMapper.swift */; };
 		BAA7E4FD2AD7005B0091FC84 /* DomainMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4FC2AD7005B0091FC84 /* DomainMapperTests.swift */; };
 		BAA7E5042AD700C90091FC84 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E5032AD700C90091FC84 /* Mocks.swift */; };
+		BAA7E5072AD702580091FC84 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E5062AD702580091FC84 /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BAA7E4FA2AD7005B0091FC84 /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA7E4FC2AD7005B0091FC84 /* DomainMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainMapperTests.swift; sourceTree = "<group>"; };
 		BAA7E5032AD700C90091FC84 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		BAA7E5062AD702580091FC84 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		BAA7E4CA2AD6F4EC0091FC84 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E5052AD7023A0091FC84 /* Utilities */,
 				BAA7E4F02AD6FEE50091FC84 /* Domain */,
 				BAA7E4D22AD6F9520091FC84 /* LoadingState */,
 				BAA7E4E12AD6FC660091FC84 /* Network */,
@@ -242,6 +245,14 @@
 				BAA7E5032AD700C90091FC84 /* Mocks.swift */,
 			);
 			path = AppTests;
+			sourceTree = "<group>";
+		};
+		BAA7E5052AD7023A0091FC84 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E5062AD702580091FC84 /* Double+Extension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				BAA7E4E72AD6FCDD0091FC84 /* CoinGeckoClient.swift in Sources */,
 				BAA7E4E42AD6FC870091FC84 /* RemoteCoinMarket.swift in Sources */,
 				BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */,
+				BAA7E5072AD702580091FC84 /* Double+Extension.swift in Sources */,
 				BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */,
 				BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */,
 				BAA7E4F52AD7001C0091FC84 /* DomainMapper.swift in Sources */,

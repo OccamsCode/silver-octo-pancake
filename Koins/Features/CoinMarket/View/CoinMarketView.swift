@@ -12,7 +12,7 @@ struct CoinMarketView: View {
         NavigationView {
             List {
                 ForEach(0..<15) { index in
-                    CoinMarketRowView()
+                    CoinMarketRowView(coin: .preview)
                 }
             }
             .listStyle(.plain)

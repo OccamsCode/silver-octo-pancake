@@ -8,23 +8,30 @@
 import SwiftUI
 
 struct CoinMarketRowView: View {
+    let coin: CoinMarket
     var body: some View {
         HStack {
             
-            // Market Cap
-            Text("# 1")
+            // Market Cap Rank
+            Text("# \(coin.marketCapRank)")
             
             // Image
-            Image(systemName: "bitcoinsign.circle")
-                .resizable()
-                .frame(width: 32, height: 32)
+            AsyncImage(url: coin.thumbnailImageURL) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 32, height: 32)
             
             // Coin Name Info
             VStack(alignment: .leading, spacing: 5) {
-                Text("BTC")
+                Text(coin.symbol.uppercased())
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                Text("$441.4B")
+                
+                Text(coin.marketCap.asShorthand)
                     .font(.caption)
             }
             .padding(.leading, 2)
@@ -33,12 +40,13 @@ struct CoinMarketRowView: View {
             
             // Coin Price Info
             VStack(alignment: .trailing, spacing: 5) {
-                Text("$22,900.00")
+                Text(coin.price.asCurrency)
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                Text("0.3%")
+                
+                Text(coin.pricePercentageChange.asPercentage)
                     .font(.caption)
-                    .foregroundColor(.green)
+                    .foregroundColor(coin.pricePercentageChange > 0.0 ? .green : .red)
             }
         }
     }
@@ -46,6 +54,6 @@ struct CoinMarketRowView: View {
 
 struct CoinMarketRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinMarketRowView()
+        CoinMarketRowView(coin: .preview)
     }
 }
