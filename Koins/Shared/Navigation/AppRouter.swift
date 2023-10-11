@@ -7,6 +7,9 @@
 
 struct AppRouter {
     static func registerRoutes() {
-        Router.shared.register(NavigationRoute(path: .coinMarket, destination: CoinMarketView()))
+        Router.shared.register(
+            NavigationRoute(path: .coinMarket, destination: CoinMarketView()),
+            NavigationRoute(path: .coinMarketChart, destination: CoinMarketChartView())
+        )
     }
 }

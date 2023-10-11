@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CoinMarketView: View {
     
+    @Environment(\.router) var router
     @EnvironmentObject var observable: CoinMarketObservable
     
     var body: some View {
@@ -17,25 +18,32 @@ struct CoinMarketView: View {
             loadingView
             
         case .failed(let error):
-            ErrorStateView(error: error.localizedDescription)
+            ErrorStateView(error: error.localizedDescription) {
+                fetchCoinMarket()
+            }
             
         case .success(let coins):
             NavigationView {
                 List {
                     ForEach(coins) { coin in
-                        CoinMarketRowView(coin: coin)
+                        NavigationLink(destination: router.resolve(path: .coinMarketChart)
+                            .navigationBarTitleDisplayMode(.inline)
+                            .environmentObject(CoinMarketChartObservable(coin: coin))) {
+                                CoinMarketRowView(coin: coin)
+                            }
                     }
                 }
                 .listStyle(.plain)
                 .navigationTitle("Markets")
+                .refreshable {
+                    fetchCoinMarket()
+                }
             }
             
         case .idle:
             Color.clear
                 .onAppear {
-                    Task {
-                        try? await observable.fetchAllCoins()
-                    }
+                    fetchCoinMarket()
                 }
         }
     }
@@ -67,6 +75,12 @@ struct CoinMarketView: View {
         }
         .redacted(reason: .placeholder)
         .padding(.horizontal)
+    }
+    
+    func fetchCoinMarket() {
+        Task {
+            try? await observable.fetchAllCoins()
+        }
     }
     
 }
