@@ -51,9 +51,11 @@
 		BAA7E4B82AD6F4380091FC84 /* Koins */ = {
 			isa = PBXGroup;
 			children = (
-				BAA7E4B92AD6F4380091FC84 /* KoinsApp.swift */,
+				BAA7E4CA2AD6F4EC0091FC84 /* Core */,
+				BAA7E4C82AD6F4C90091FC84 /* Features */,
+				BAA7E4C92AD6F4D70091FC84 /* Shared */,
+				BAA7E4C72AD6F4C00091FC84 /* Sources */,
 				BAA7E4BB2AD6F4380091FC84 /* ContentView.swift */,
-				BAA7E4BD2AD6F43B0091FC84 /* Assets.xcassets */,
 				BAA7E4BF2AD6F43B0091FC84 /* Preview Content */,
 			);
 			path = Koins;
@@ -65,6 +67,36 @@
 				BAA7E4C02AD6F43B0091FC84 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAA7E4C72AD6F4C00091FC84 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4B92AD6F4380091FC84 /* KoinsApp.swift */,
+				BAA7E4BD2AD6F43B0091FC84 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BAA7E4C82AD6F4C90091FC84 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BAA7E4C92AD6F4D70091FC84 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BAA7E4CA2AD6F4EC0091FC84 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
