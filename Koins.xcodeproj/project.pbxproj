@@ -20,6 +20,7 @@
 		BAA7E4EA2AD6FCFA0091FC84 /* Poppify in Frameworks */ = {isa = PBXBuildFile; productRef = BAA7E4E92AD6FCFA0091FC84 /* Poppify */; };
 		BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4EB2AD6FD660091FC84 /* Requests.swift */; };
 		BAA7E4EF2AD6FE1B0091FC84 /* CoinGeckoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4EE2AD6FE1B0091FC84 /* CoinGeckoRepository.swift */; };
+		BAA7E4F32AD6FF100091FC84 /* CoinMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E4F22AD6FF100091FC84 /* CoinMarket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BAA7E4E62AD6FCDD0091FC84 /* CoinGeckoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoClient.swift; sourceTree = "<group>"; };
 		BAA7E4EB2AD6FD660091FC84 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		BAA7E4EE2AD6FE1B0091FC84 /* CoinGeckoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoRepository.swift; sourceTree = "<group>"; };
+		BAA7E4F22AD6FF100091FC84 /* CoinMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		BAA7E4CA2AD6F4EC0091FC84 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BAA7E4F02AD6FEE50091FC84 /* Domain */,
 				BAA7E4D22AD6F9520091FC84 /* LoadingState */,
 				BAA7E4E12AD6FC660091FC84 /* Network */,
 				BAA7E4ED2AD6FDE80091FC84 /* Repositories */,
@@ -187,6 +190,22 @@
 				BAA7E4EE2AD6FE1B0091FC84 /* CoinGeckoRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BAA7E4F02AD6FEE50091FC84 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4F12AD6FEEF0091FC84 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BAA7E4F12AD6FEEF0091FC84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7E4F22AD6FF100091FC84 /* CoinMarket.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +290,7 @@
 				BAA7E4EC2AD6FD660091FC84 /* Requests.swift in Sources */,
 				BAA7E4BA2AD6F4380091FC84 /* KoinsApp.swift in Sources */,
 				BAA7E4D42AD6F9790091FC84 /* LoadingState.swift in Sources */,
+				BAA7E4F32AD6FF100091FC84 /* CoinMarket.swift in Sources */,
 				BAA7E4EF2AD6FE1B0091FC84 /* CoinGeckoRepository.swift in Sources */,
 				BAA7E4D62AD6F9AC0091FC84 /* ErrorStateView.swift in Sources */,
 				BAA7E4D12AD6F6710091FC84 /* CoinMarketRowView.swift in Sources */,
